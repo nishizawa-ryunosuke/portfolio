@@ -25,7 +25,11 @@ export default function Heading({
     case "h1":
       return <h1 className={combinedClassName}>{children}</h1>;
     case "h2":
-      return <h2 className={combinedClassName}>{children}</h2>;
+      return (
+        <h2 className={combinedClassName}>
+          <span className=" border-b-4 border-[#b5ff6d]">{children}</span>
+        </h2>
+      );
     case "h3":
       return <h3 className={combinedClassName}>{children}</h3>;
     default:

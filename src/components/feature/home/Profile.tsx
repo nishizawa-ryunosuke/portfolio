@@ -9,7 +9,7 @@ import Stepper, {
 
 export default function Profile() {
   return (
-    <div className="text-center">
+    <div className="text-center mb-40">
       <div className="mb-24">
         <AnimatedContent
           distance={100}
@@ -33,15 +33,14 @@ export default function Profile() {
         >
           <DecryptedText
             text="1997年 茨城生まれ。東京で働いているWebエンジニア6年目です。"
-            speed={60}
+            speed={40}
             maxIterations={10}
             animateOn="view"
             sequential={true}
           />
         </AnimatedContent>
       </div>
-
-      <div className="mb-24">
+      <div>
         <AnimatedContent
           distance={100}
           direction="vertical"
