@@ -27,10 +27,8 @@ export default function FirstView() {
             circle.style.border = "3px solid red";
             circle.style.zIndex = "10";
             document.body.appendChild(circle);
-            // クリックされたらテキストを「Complete!」に変更
-            const clickedElement = e.currentTarget;
-            clickedElement.textContent = "Complete!";
             setIsClicked(true);
+            const clickedElement = e.currentTarget;
 
             const animation = circle.animate(
               [
@@ -45,6 +43,8 @@ export default function FirstView() {
             );
 
             animation.onfinish = () => {
+              // クリックされたらテキストを「Complete!」に変更
+              clickedElement.textContent = "Complete!";
               document.body.removeChild(circle);
               router.push("/home");
             };
