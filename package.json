@@ -13,6 +13,7 @@
     "@react-spring/shared": "^9.7.5",
     "@react-spring/web": "^9.7.5",
     "framer-motion": "^12.6.5",
+    "gsap": "^3.12.7",
     "motion": "^12.6.5",
     "next": "15.3.0",
     "ogl": "^1.0.11",
