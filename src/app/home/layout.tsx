@@ -1,5 +1,5 @@
-import Header from "../../components/ui/Header";
-import Footer from "../../components/ui/Footer";
+import Header from "@/components/ui/Header";
+
 export default function HomeLayout({
   children,
 }: {
@@ -9,7 +9,6 @@ export default function HomeLayout({
     <div className="min-h-screen ">
       <Header />
       <main>{children}</main>
-      <Footer />
     </div>
   );
 }

@@ -3,7 +3,7 @@ import MainVisual from "@/components/feature/home/MainVisual";
 import Profile from "@/components/feature/home/Profile";
 import Skills from "@/components/feature/home/Skills";
 import Blog from "@/components/feature/home/Blog";
-
+import Footer from "@/components/ui/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +20,7 @@ export default function Home() {
       <div className="mb-40">
         <Blog />
       </div>
+      <Footer />
     </PageTransition>
   );
 }

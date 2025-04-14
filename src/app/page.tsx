@@ -69,7 +69,7 @@ export default function FirstView() {
             onLetterAnimationComplete={() => {
               setTimeout(() => {
                 setWelcomeText("Shot!");
-              }, 2000);
+              }, 1500);
             }}
           />
         </span>
