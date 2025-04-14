@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 export default function FirstView() {
   const containerRef = useRef(null);
   const [isHovered, setIsHovered] = useState(false);
-  const [isClicked, setIsClicked] = useState(false);
+  const [welcomeText, setWelcomeText] = useState("Welcome to my portfolio!");
   const router = useRouter();
   return (
     <div>
@@ -27,7 +27,6 @@ export default function FirstView() {
             circle.style.border = "3px solid red";
             circle.style.zIndex = "10";
             document.body.appendChild(circle);
-            setIsClicked(true);
             const clickedElement = e.currentTarget;
 
             const animation = circle.animate(
@@ -50,21 +49,15 @@ export default function FirstView() {
             };
           }}
           className="hover:text-red-500 transition-colors duration-300 cursor-pointer text-2xl sm:text-4xl font-bold text-center"
-          onMouseEnter={(e) => {
-            if (!isClicked) {
-              e.currentTarget.textContent = "Shot!";
-              setIsHovered(true);
-            }
+          onMouseEnter={() => {
+            setIsHovered(true);
           }}
-          onMouseLeave={(e) => {
-            if (!isClicked) {
-              e.currentTarget.textContent = "Welcome to my portfolio!";
-              setIsHovered(false);
-            }
+          onMouseLeave={() => {
+            setIsHovered(false);
           }}
         >
           <SplitText
-            text="Welcome to my portfolio!"
+            text={welcomeText}
             delay={100}
             animationFrom={{
               opacity: 0,
@@ -73,6 +66,11 @@ export default function FirstView() {
             animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
             threshold={0.2}
             rootMargin="-50px"
+            onLetterAnimationComplete={() => {
+              setTimeout(() => {
+                setWelcomeText("Shot!");
+              }, 2000);
+            }}
           />
         </span>
       </div>
