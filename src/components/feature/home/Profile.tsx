@@ -32,7 +32,15 @@ export default function Profile() {
           animateOpacity
         >
           <DecryptedText
-            text="1997年 茨城生まれ。東京で働いているWebエンジニア6年目です。"
+            text="1997年 茨城生まれ。"
+            speed={40}
+            maxIterations={10}
+            animateOn="view"
+            sequential={true}
+          />
+          <br />
+          <DecryptedText
+            text="東京在住 Webエンジニア6年目です。"
             speed={40}
             maxIterations={10}
             animateOn="view"

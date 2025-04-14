@@ -30,15 +30,33 @@ export default function Skills() {
           initialOpacity={0.2}
           animateOpacity
         >
-          <div className="flex justify-center items-center">
+          <div>
             <DecryptedText
-              text="各領域の得意割合 → フロントエンド50%。バックエンド40%。インフラ10%。"
+              text="Next.jsでのフロントエンド開発"
               speed={40}
               maxIterations={10}
               animateOn="view"
               sequential={true}
             />
-          </div>
+            </div>
+            <div>
+            <DecryptedText
+              text="Goでのバックエンド開発"
+              speed={40}
+              maxIterations={10}
+              animateOn="view"
+              sequential={true}
+            />
+            </div>
+        <div>
+          <DecryptedText
+            text="が得意です"
+            speed={40}
+            maxIterations={10}
+            animateOn="view"
+            sequential={true}
+          />
+        </div>
         </AnimatedContent>
       </div>
       <div>
@@ -82,18 +100,12 @@ export default function Skills() {
                   imagePath="/images/home/logo-docker.svg"
                   text="Docker"
                 />
-                <LogoIcon
-                  imagePath="/images/home/logo-aws.svg"
-                  text="AWS"
-                />
+                <LogoIcon imagePath="/images/home/logo-aws.svg" text="AWS" />
                 <LogoIcon
                   imagePath="/images/home/logo-mysql.svg"
                   text="MySQL"
                 />
-                <LogoIcon
-                  imagePath="/images/home/logo-git.svg"
-                  text="Git"
-                />
+                <LogoIcon imagePath="/images/home/logo-git.svg" text="Git" />
                 <LogoIcon
                   imagePath="/images/home/logo-figma.svg"
                   text="Figma"
@@ -111,10 +123,7 @@ export default function Skills() {
                   imagePath="/images/home/logo-python.svg"
                   text="Python"
                 />
-                <LogoIcon
-                  imagePath="/images/home/logo-php.svg"
-                  text="PHP"
-                />
+                <LogoIcon imagePath="/images/home/logo-php.svg" text="PHP" />
                 <LogoIcon
                   imagePath="/images/home/logo-linux.svg"
                   text="Linux"
