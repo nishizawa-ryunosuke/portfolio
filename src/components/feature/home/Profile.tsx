@@ -60,7 +60,7 @@ export default function Profile() {
           <Stepper initialStep={1} backButtonText="Back" nextButtonText="Next">
             <Step>
               <p>2020年3月</p>
-              <p>北里大学 理学部 化学科 卒業</p>
+              <p>某理系大学 理学部 卒業</p>
             </Step>
             <Step>
               <p>2020年4月～2022年1月</p>
